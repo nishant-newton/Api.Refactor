@@ -1,0 +1,56 @@
+{
+  "definitions": {
+    "ProductDTO": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Id": {
+          "type": "string"
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Price": {
+          "type": "number"
+        },
+        "DeliveryPrice": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "Id",
+        "Name",
+        "Description",
+        "Price",
+        "DeliveryPrice"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "Items": {
+      "type": [
+        "array",
+        "null",
+        { "$ref": "#" }
+      ],
+      "items": {
+        "$ref": "#/definitions/ProductDTO"
+      }
+    }
+  },
+  "required": [
+    "Items"
+  ]
+}
